@@ -1,7 +1,10 @@
-### Integrantes e Matrículas:
-- Nome: Leonardo Louzada de Melo | Matrícula: UC23100791
-- Nome: Leonardo Rodrigues Amorim Filho | Matrícula: UC23101012
-- Nome: Mario Eduardo Pereira de Sousa | Matrícula: UC23101279
+### Integrantes e Matrículas
+
+• Nome: Leonardo Rodrigues Amorim Filho | Matrícula: UC23101012
+
+• Nome: Mario Eduardo Pereira de Sousa / UC023101279
+
+• Nome: Matheus Silva / UC23100843
 
 ---
 
