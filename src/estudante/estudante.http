@@ -1,0 +1,30 @@
+POST http://localhost:3000/estudante
+Content-Type: application/json
+
+{
+  "nome": "",
+  "email": "",
+  "idade": ,
+  "cidadeId": 
+}
+###
+
+GET http://localhost:3000/estudante
+###
+
+GET http://localhost:3000/estudante/id
+###
+
+PUT http://localhost:3000/estudante/id
+Content-Type: application/json
+
+{
+  "nome": "",
+  "email": "",
+  "idade": ,
+  "cidadeId": 
+}
+###
+
+DELETE http://localhost:3000/estudante/id
+###

@@ -1,0 +1,26 @@
+### Criar uma UF
+POST http://localhost:3000/uf
+Content-Type: application/json
+
+{
+  "sigla": "",
+  "nome": ""
+}
+
+### Listar UFs
+GET http://localhost:3000/id
+
+### Buscar UF por ID
+GET http://localhost:3000/uf/id
+
+### Atualizar UF
+PUT http://localhost:3000/uf/id
+Content-Type: application/json
+
+{
+  "sigla": "",
+  "nome": ""
+}
+
+### Remover UF
+DELETE http://localhost:3000/uf/id
