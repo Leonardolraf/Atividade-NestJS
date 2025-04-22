@@ -6,9 +6,11 @@ Este projeto foi desenvolvido utilizando o framework NestJS com TypeORM e SQLite
 
 ## Integrantes e Matrículas
 
-• Nome: Leonardo Louzada de Melo | Matrícula: UC23100791  
-
 • Nome: Leonardo Rodrigues Amorim Filho | Matrícula: UC23101012
+
+• Nome: Mario Eduardo Pereira de Sousa / UC023101279
+
+• Nome: Matheus Silva / UC23100843
 
 ---
 
