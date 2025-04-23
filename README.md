@@ -23,7 +23,7 @@ API desenvolvida com NestJS para gestão de um sistema de hortifrutigranjeiros. 
 ## 📁 Estrutura do Projeto
 
 ```bash
-Atividade-NestJs-HortiBox/
+Atividade-NestJs/
 ├── src/
 │   ├── produto/
 │   ├── categoria-produto/
@@ -94,5 +94,5 @@ Content-Type: application/json
 }
 ```
 
-
+---
 
