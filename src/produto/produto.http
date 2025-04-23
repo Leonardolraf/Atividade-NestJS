@@ -1,0 +1,28 @@
+### Criar um Produto
+POST http://localhost:3000/produto
+Content-Type: application/json
+
+{
+  "nome": "",
+  "descricao": "",
+  "ativo": true
+}
+
+### Listar Produtos
+GET http://localhost:3000/produto
+
+### Buscar Produto por ID
+GET http://localhost:3000/produto/id
+
+### Atualizar Produto
+PUT http://localhost:3000/produto/id
+Content-Type: application/json
+
+{
+  "nome": "",
+  "descricao": "",
+  "ativo": true
+}
+
+### Remover Produto
+DELETE http://localhost:3000/produto/id

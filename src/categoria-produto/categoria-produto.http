@@ -1,0 +1,28 @@
+### Criar um Categoria produto
+POST http://localhost:3000/categoria-produto
+Content-Type: application/json
+
+{
+  "nome": "",
+  "descricao": "",
+  "ativo": true
+}
+
+### Listar Categoria produtos
+GET http://localhost:3000/categoria-produto
+
+### Buscar Categoria produto por ID
+GET http://localhost:3000/categoria-produto/id
+
+### Atualizar Categoria produto
+PUT http://localhost:3000/categoria-produto/id
+Content-Type: application/json
+
+{
+  "nome": "",
+  "descricao": "",
+  "ativo": true
+}
+
+### Remover Categoria produto
+DELETE http://localhost:3000/categoria-produto/id

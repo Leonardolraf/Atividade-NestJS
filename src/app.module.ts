@@ -4,6 +4,7 @@ import { AppService } from './app.service';
 import { UfModule } from './uf/uf.module';
 import { CidadeModule } from './cidade/cidade.module';
 import { EstudanteModule } from './estudante/estudante.module';
+import { ProdutoModule } from './produto/produto.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { Cidade } from './cidade/entities/cidade.entity';
 import { Uf } from './uf/entities/uf.entity';

@@ -1,223 +1,98 @@
-# Projeto NestJS - CRUD de UFs, Cidades e Estudantes
-
-Este projeto foi desenvolvido utilizando o framework NestJS com TypeORM e SQLite, com o objetivo de implementar um CRUD completo para as entidades: UF, Cidade e Estudante. Foi adotado o padrão REST, boas práticas de modularização e princípios de Programação Orientada a Objetos com TypeScript.
-
----
-
-## Integrantes e Matrículas
-
-• Nome: Leonardo Rodrigues Amorim Filho | Matrícula: UC23101012
-
-• Nome: Mario Eduardo Pereira de Sousa / UC023101279
-
-• Nome: Matheus Silva / UC23100843
+### Integrantes e Matrículas:
+- Nome: Leonardo Rodrigues Amorim Filho | Matrícula: UC23101012
+- Nome: Mario Eduardo Pereira de Sousa | Matrícula: UC23101279
+- Nome: Matheus Silva / UC23100843
+  
 
 ---
+# HortiBox API - Projeto NestJS
+
+API desenvolvida com NestJS para gestão de um sistema de hortifrutigranjeiros. Este projeto possui estrutura modularizada com 13 módulos principais, funcionalidades CRUD completas, relacionamentos entre entidades, e população automática de dados (seed).
+
+## 📚 Funcionalidades
+
+- Cadastro e gestão de produtos, categorias e fornecedores
+- Controle de estoque
+- Registro de clientes e seus endereços
+- Processamento de pedidos e itens vinculados
+- Controle de pagamentos e entregas
+- Cadastro de UF, cidades e estudantes
+- Relacionamentos entre entidades (produto-categoria, produto-fornecedor, pedido-cliente, etc)
+- População inicial do banco com `seed.ts`
 
 ## 📁 Estrutura do Projeto
 
-- src/
-  - uf/
-  - cidade/
-  - estudante/
-  - app.module.ts
-  - main.ts
-- db.sqlite
-- package.json
-- requests.http
-- README.md
-
----
-
-## ✅ Pré-requisitos
-
-Certifique-se de ter os seguintes itens instalados:
-
-- Node.js (versão 16 ou superior)
-- npm
-- NestJS CLI (instalado globalmente)
-
-Instalação do NestJS CLI:
-
 ```bash
-npm install -g @nestjs/cli
+Atividade-NestJs-HortiBox/
+├── src/
+│   ├── produto/
+│   ├── categoria-produto/
+│   ├── cliente/
+│   ├── pedido/
+│   ├── item-pedido/
+│   ├── pagamento/
+│   ├── entrega/
+│   ├── fornecedor/
+│   ├── estoque/
+│   ├── endereco/
+│   ├── cidade/
+│   ├── uf/
+│   └── estudante/
+├── seed.ts              # Script para popular o banco
+├── package.json         # Dependências do projeto
+├── ormconfig.json       # Configuração do TypeORM
+├── tsconfig.json        # Configuração do TypeScript
 ```
 
----
+## ⚙️ Tecnologias Utilizadas
 
-## 📦 Instalação do Projeto
+- [NestJS](https://nestjs.com/)
+- [TypeORM](https://typeorm.io/)
+- [SQLite](https://www.sqlite.org/)
+- TypeScript
 
-Clone o repositório e entre na pasta:
+## ⚡ Instalação
 
-```bash
-git clone <URL-do-repositório>
-cd projeto-nest-crud
-```
+1. Clone o repositório ou extraia os arquivos
+2. Acesse a pasta do projeto:
+   ```bash
+   cd Atividade-NestJs-HortiBox
+   ```
+3. Instale as dependências:
+   ```bash
+   npm install
+   ```
 
-Instale as dependências:
+## 🚀 Executando o Projeto
 
-```bash
-npm install
-```
-
----
-
-## 🚀 Execução do Projeto
-
-Em modo de desenvolvimento:
-
+### Em modo desenvolvimento
 ```bash
 npm run start:dev
 ```
 
-Em modo de produção:
-
+### Para popular o banco (execute uma vez):
 ```bash
-npm run build
-npm run start
+npx ts-node seed.ts
 ```
 
----
+> ✅ Isso criará dados automáticos para Produto, Categoria, Fornecedor, Cliente, Pedido, etc.
 
-## 🔁 Consumo da API
+## 🔍 Testando as rotas
 
-Utilize a extensão REST Client no VS Code:
+Use o VS Code com a extensão **REST Client** ou ferramentas como Postman para testar os arquivos `.http` presentes em cada pasta de módulo.
 
-1. Instale a extensão "REST Client"
-2. Abra o arquivo requests.http
-3. Clique em “Send Request” para testar as rotas
-
----
-
-## ✅ Rotas implementadas
-
-- /uf (GET, POST, PUT, DELETE)
-- /cidade (GET, POST, PUT, DELETE)
-- /estudante (GET, POST, PUT, DELETE)
-
----
-
-## 📚 Anotações Técnicas e de Estudo
-
-### Introdução
-
-O NestJS é um framework moderno para Node.js que utiliza TypeScript e é inspirado na arquitetura do Angular. Ele promove escalabilidade e organização através de módulos, serviços, controladores e injeção de dependência.
-
----
-
-### Criando o Projeto
-
-```bash
-nest new projeto-nest-crud
-```
-
-O comando acima gera uma estrutura básica do projeto NestJS.
-
----
-
-### Criando a API com o Gerador
-
-```bash
-nest generate resource uf --no-spec
-nest generate resource cidade --no-spec
-nest generate resource estudante --no-spec
-```
-
-Foi escolhida a opção REST API com CRUD completo.
-
----
-
-### Validação de Dados
-
-Instalação:
-
-```bash
-npm install class-validator class-transformer
-```
-
-Exemplo de uso no DTO:
-
-```ts
-import { IsString, IsNotEmpty } from 'class-validator';
-
-export class CreateUfDto {
-  @IsString()
-  @IsNotEmpty()
-  nome: string;
-}
-```
-
----
-
-### TypeORM e SQLite
-
-Instalação:
-
-```bash
-npm install @nestjs/typeorm typeorm sqlite3
-```
-
-Configuração em app.module.ts:
-
-```ts
-TypeOrmModule.forRoot({
-  type: 'sqlite',
-  database: 'db.sqlite',
-  entities: [Uf, Cidade, Estudante],
-  synchronize: true,
-}),
-```
-
----
-
-### Injeção de Dependência
-
-Feita automaticamente com @Injectable():
-
-```ts
-constructor(private readonly ufService: UfService) {}
-```
-
----
-
-### Lógica na Service
-
-Toda a lógica de acesso a dados é implementada nas classes de serviço usando os repositórios do TypeORM.
-
----
-
-### Boas Práticas REST
-
-- Utilizar nomes de rotas no plural
-- Métodos HTTP apropriados (GET, POST, PUT, DELETE)
-- Retorno com status HTTP corretos (201, 404, etc)
-
----
-
-## Próximos Passos
-
-- Implementar autenticação e autorização
-- Criar filtros de busca por parâmetros (ex: listar estudantes de uma cidade)
-- Exportar dados para CSV/Excel
-- Adicionar testes automatizados
-
----
-
-## Desafio
-
-- Uma UF possui várias cidades (OneToMany)
-- Uma cidade possui vários estudantes (OneToMany)
-- Buscar estudantes por cidade e cidades por UF
-
----
-
-## 🧪 Exemplo de Comando para Criar UF
-
+Exemplo com REST Client:
 ```http
-POST http://localhost:3000/uf
+### Criar um Produto
+POST http://localhost:3000/produto
 Content-Type: application/json
 
 {
-  "nome": "Distrito Federal"
+  "nome": "Maçã",
+  "descricao": "Maçã gala",
+  "ativo": true
 }
 ```
+
+
+

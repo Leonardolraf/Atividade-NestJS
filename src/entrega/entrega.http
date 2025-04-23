@@ -1,0 +1,28 @@
+### Criar um Entrega
+POST http://localhost:3000/entrega
+Content-Type: application/json
+
+{
+  "nome": "",
+  "descricao": "",
+  "ativo": true
+}
+
+### Listar Entregas
+GET http://localhost:3000/entrega
+
+### Buscar Entrega por ID
+GET http://localhost:3000/entrega/id
+
+### Atualizar Entrega
+PUT http://localhost:3000/entrega/id
+Content-Type: application/json
+
+{
+  "nome": "",
+  "descricao": "",
+  "ativo": true
+}
+
+### Remover Entrega
+DELETE http://localhost:3000/entrega/id

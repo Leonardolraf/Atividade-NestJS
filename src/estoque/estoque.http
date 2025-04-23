@@ -1,0 +1,28 @@
+### Criar um Estoque
+POST http://localhost:3000/estoque
+Content-Type: application/json
+
+{
+  "nome": "",
+  "descricao": "",
+  "ativo": true
+}
+
+### Listar Estoques
+GET http://localhost:3000/estoque
+
+### Buscar Estoque por ID
+GET http://localhost:3000/estoque/id
+
+### Atualizar Estoque
+PUT http://localhost:3000/estoque/id
+Content-Type: application/json
+
+{
+  "nome": "",
+  "descricao": "",
+  "ativo": true
+}
+
+### Remover Estoque
+DELETE http://localhost:3000/estoque/id
