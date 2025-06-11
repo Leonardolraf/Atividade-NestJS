@@ -2,8 +2,8 @@ POST http://localhost:3000/cidade
 Content-Type: application/json
 
 {
-  "nome": "",
-  "estado": ""
+  "nome": "sao paulo",
+  "estado": "sao paulo"
 }
 ###
 
@@ -17,8 +17,8 @@ PUT http://localhost:3000/cidade/id
 Content-Type: application/json
 
 {
-  "nome": "",
-  "estado": ""
+  "nome": "bh",
+  "estado": "Minas Gerais"
 }
 ###
 

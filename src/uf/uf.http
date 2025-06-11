@@ -3,8 +3,8 @@ POST http://localhost:3000/uf
 Content-Type: application/json
 
 {
-  "sigla": "",
-  "nome": ""
+  "sigla": "DF",
+  "nome": "DF"
 }
 
 ### Listar UFs
@@ -12,6 +12,13 @@ GET http://localhost:3000/id
 
 ### Buscar UF por ID
 GET http://localhost:3000/uf/id
+Content-Type: application/json
+
+{
+  "id": 1,
+  "sigla": "DF",
+  
+}
 
 ### Atualizar UF
 PUT http://localhost:3000/uf/id
