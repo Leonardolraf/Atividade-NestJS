@@ -1,0 +1,28 @@
+### Criar um Pedido
+POST http://localhost:3000/pedido
+Content-Type: application/json
+
+{
+  "nome": "",
+  "descricao": "",
+  "ativo": true
+}
+
+### Listar Pedidos
+GET http://localhost:3000/pedido
+
+### Buscar Pedido por ID
+GET http://localhost:3000/pedido/id
+
+### Atualizar Pedido
+PUT http://localhost:3000/pedido/id
+Content-Type: application/json
+
+{
+  "nome": "",
+  "descricao": "",
+  "ativo": true
+}
+
+### Remover Pedido
+DELETE http://localhost:3000/pedido/id

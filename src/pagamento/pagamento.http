@@ -1,0 +1,28 @@
+### Criar um Pagamento
+POST http://localhost:3000/pagamento
+Content-Type: application/json
+
+{
+  "nome": "",
+  "descricao": "",
+  "ativo": true
+}
+
+### Listar Pagamentos
+GET http://localhost:3000/pagamento
+
+### Buscar Pagamento por ID
+GET http://localhost:3000/pagamento/id
+
+### Atualizar Pagamento
+PUT http://localhost:3000/pagamento/id
+Content-Type: application/json
+
+{
+  "nome": "",
+  "descricao": "",
+  "ativo": true
+}
+
+### Remover Pagamento
+DELETE http://localhost:3000/pagamento/id

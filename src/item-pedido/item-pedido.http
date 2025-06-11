@@ -1,0 +1,28 @@
+### Criar um Item pedido
+POST http://localhost:3000/item-pedido
+Content-Type: application/json
+
+{
+  "nome": "",
+  "descricao": "",
+  "ativo": true
+}
+
+### Listar Item pedidos
+GET http://localhost:3000/item-pedido
+
+### Buscar Item pedido por ID
+GET http://localhost:3000/item-pedido/id
+
+### Atualizar Item pedido
+PUT http://localhost:3000/item-pedido/id
+Content-Type: application/json
+
+{
+  "nome": "",
+  "descricao": "",
+  "ativo": true
+}
+
+### Remover Item pedido
+DELETE http://localhost:3000/item-pedido/id
